@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main/css/home.css">
+    <link rel="stylesheet" href="/main/css/footer.css">
+    <link rel="stylesheet" href="/main/css/nav.css">
+    <link rel="icon" href="/asset/tilak-high-resolution-logo-transparent.png" type="favicon">
+    <title>Tilak Kadlaskar : Innovating today, Leading tomorrow</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="floating-navbar">
+            <div class="logo">
+                <img src="/asset/tilak-high-resolution-logo-transparent.png" alt="Tilak Logo">
+            </div>
+            <ul class="nav-list">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="#blogs" class="nav-link">Contact</a></li>
+                <li><a href="#contact" class="nav-link">Log In</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="Welcome-pic">
+            <img src="/asset/ralph-katieb-7Jg5xt5L9QE-unsplash.jpg" alt="Your Photo" class="about-photo">  
+        </div>
+
+        <div class="Recent-blogs">
+            <div class="blog-card">
+                <img src="/asset/blog1.jpg" alt="Blog 1">
+                <div class="blog-content">
+                    <h3>Blog Title 1</h3>
+                    <p>Short description of the blog post.</p>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="/asset/blog2.jpg" alt="Blog 2">
+                <div class="blog-content">
+                    <h3>Blog Title 2</h3>
+                    <p>Short description of the blog post.</p>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="/asset/blog3.jpg" alt="Blog 3">
+                <div class="blog-content">
+                    <h3>Blog Title 3</h3>
+                    <p>Short description of the blog post.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="life">
+            <div class="carousel">
+                <div class="carousel-slide">
+                    <img src="/asset/life1.jpg" alt="Image 1">
+                    <div class="caption">Caption for Image 1</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="/asset/life2.jpg" alt="Image 2">
+                    <div class="caption">Caption for Image 2</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="/asset/life3.jpg" alt="Image 3">
+                    <div class="caption">Caption for Image 3</div>
+                </div>
+            </div>
+        </div>
+            
+    </main>
+
+    <footer class="new_footer_area bg_color">
+        <section class="footer">
+            <div class="footer-section">
+                <h3>Get in Touch</h3>
+                <p>Don’t miss any updates, subscribe to the newsletter now!!</p>
+                <form>
+                    <input type="email" placeholder="Email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-section">
+                <h3>Important links</h3>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Log In</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Support Policy</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow me on</h3>
+                <div class="social-icons">
+                    <a href="/asset/instagram.svg"><img src="/asset/instagram.svg" alt="Facebook"></a>
+                    <a href="/asset/facebook.svg"><img src="/asset/facebook.svg" alt="Twitter"></a>
+                    <a href="/asset/tilak-high-resolution-logo.png"><img src="/asset/linkedin.svg" alt="LinkedIn"></a>
+                    <a href="/asset/linkedin.svg"><img src="/asset/twitter.svg" alt="Pinterest"></a>
+                </div>
+            </div>
+        </section>
+        <div class="new_footer_top">
+            <div class="footer_bg">
+                <div class="footer_bg_one"></div>
+                <div class="footer_bg_two"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js">
+
+const carousel = document.querySelector('.carousel');
+    const slides = document.querySelectorAll('.carousel-slide');
+    let index = 0;
+
+    function showNextSlide() {
+        index++;
+        if (index >= slides.length) {
+            index = 0;
+        }
+        carousel.style.transform = `translateX(${-index * 100}%)`;
+    }
+
+    setInterval(showNextSlide, 3000); // Change slide every 3 seconds
+    </script>
+</body>
+</html>
