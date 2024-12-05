@@ -81,6 +81,7 @@ body {
 
   /*footer*/
   .footer {
+    margin-left: 120px;
     display: flex;
     justify-content: space-around; /* Space between sections */
     align-items: flex-start; /* Aligns items to the top */

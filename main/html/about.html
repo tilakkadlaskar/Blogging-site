@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/main/css/home.css">
     <link rel="stylesheet" href="/main/css/footer.css">
+    <link rel="stylesheet" href="/main/css/about.css">
     <link rel="stylesheet" href="/main/css/nav.css">
     <link rel="icon" href="/asset/tilak-high-resolution-logo-transparent.png" type="favicon">
     <title>Tilak Kadlaskar : Innovating today, Leading tomorrow</title>
@@ -26,51 +27,25 @@
     </nav>
 
     <main>
-        <div class="Welcome-pic">
-            <img src="/asset/ralph-katieb-7Jg5xt5L9QE-unsplash.jpg" alt="Your Photo" class="about-photo">  
-        </div>
+        <section class="about-section">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="/asset/Tilak pic.jpeg" alt="Your Photo">
+                </div>
+                <div class="about-content">
+                    <h1>About Me</h1>
+                    <p>Hey there! I’m Tilak—a curious soul who loves exploring the little wonders of life. I find joy in the simplest things, whether it’s a good conversation, a scenic sunset, or getting lost in a book that speaks to my heart. I believe in staying true to myself, embracing imperfections, and always keeping a sense of humor handy.
+                    <br>
+                    Life, to me, is a journey of learning, growing, and connecting with people. Through this blog, I hope to share my thoughts, stories, and experiences as I navigate this beautiful chaos we call life. If you’re here, welcome to my little corner of the world—let’s explore it together.
+                    </p>
+                </div>
 
-        <div class="Recent-blogs">
-            <div class="blog-card">
-                <img src="/asset/blog1.jpg" alt="Blog 1">
-                <div class="blog-content">
-                    <h3>Blog Title 1</h3>
-                    <p>Short description of the blog post.</p>
+                <div class="about-content2">
+                    <h1>Why This??</h1>
+                    <p>This website is my way of creating a space where I can truly be myself—a place to share my thoughts, experiences, and ideas with the world. It’s not just a platform; it’s a reflection of who I am and what I care about. I wanted to build something personal yet meaningful, where I can connect with people, tell stories, and document my journey. Whether it’s for inspiration, connection, or just a moment of curiosity, I hope this website brings a little value to everyone who visits.</p>
                 </div>
             </div>
-            <div class="blog-card">
-                <img src="/asset/blog2.jpg" alt="Blog 2">
-                <div class="blog-content">
-                    <h3>Blog Title 2</h3>
-                    <p>Short description of the blog post.</p>
-                </div>
-            </div>
-            <div class="blog-card">
-                <img src="/asset/blog3.jpg" alt="Blog 3">
-                <div class="blog-content">
-                    <h3>Blog Title 3</h3>
-                    <p>Short description of the blog post.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="life">
-            <div class="carousel">
-                <div class="carousel-slide">
-                    <img src="/asset/life1.jpg" alt="Image 1">
-                    <div class="caption">Caption for Image 1</div>
-                </div>
-                <div class="carousel-slide">
-                    <img src="/asset/life2.jpg" alt="Image 2">
-                    <div class="caption">Caption for Image 2</div>
-                </div>
-                <div class="carousel-slide">
-                    <img src="/asset/life3.jpg" alt="Image 3">
-                    <div class="caption">Caption for Image 3</div>
-                </div>
-            </div>
-        </div>
-            
+        </section>
     </main>
 
     <footer class="new_footer_area bg_color">
@@ -118,22 +93,6 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js">
-    </script>
-
-    <script>
-        const carousel = document.querySelector('.carousel');
-        const slides = document.querySelectorAll('.carousel-slide');
-        let index = 0;
-
-        function showNextSlide() {
-            index++;
-            if (index >= slides.length) {
-                index = 0;
-            }
-            carousel.style.transform = `translateX(${-index * 100}%)`;
-        }
-
-        setInterval(showNextSlide, 5000); // Change slide every 3 seconds
     </script>
 </body>
 </html>

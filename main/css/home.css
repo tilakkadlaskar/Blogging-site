@@ -379,12 +379,15 @@ main {
     min-width: 100%;
     box-sizing: border-box;
     position: relative;
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
 }
 
 .carousel-slide img {
-    width: 50%;
-    height: 50%;
-    object-fit: contain;
+    max-width: 100%; /* Set a maximum width for the images */
+    max-height: 800px; /* Set a maximum height for the images */
+    object-fit: contain; /* Ensure the images fit within the container while maintaining aspect ratio */
     display: block;
 }
 
