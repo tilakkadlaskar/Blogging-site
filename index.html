@@ -1,73 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tilak Kadlaskar - Blog</title>
-    <link rel="icon" href="./assests/Screenshot 2025-01-11 185141 - Copy.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/home.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blogs | Tilak Kadlaskar</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <!-- Added typography plugin for clean article formatting -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Crimson Pro"', 'serif'],
+              mono: ['"JetBrains Mono"', 'monospace'],
+            },
+            colors: {
+              paper: '#09090b', // Zinc 950: Deep dark background
+              ink: '#e4e4e7',   // Zinc 200: Soft white text
+              academic: {
+                blue: '#60a5fa', // Blue 400: Lighter blue for dark mode visibility
+                accent: '#f472b6', // Pink 400: Softer accent
+                surface: '#18181b', // Zinc 900: Secondary background
+                border: '#27272a', // Zinc 800: Subtle borders
+              }
+            },
+            typography: (theme) => ({
+              DEFAULT: {
+                css: {
+                  color: theme('colors.ink'),
+                  '--tw-prose-body': theme('colors.ink'),
+                  '--tw-prose-headings': theme('colors.ink'),
+                  '--tw-prose-links': theme('colors.academic.blue'),
+                  '--tw-prose-bold': theme('colors.ink'),
+                  '--tw-prose-counters': theme('colors.gray.400'),
+                  '--tw-prose-bullets': theme('colors.gray.600'),
+                  '--tw-prose-hr': theme('colors.academic.border'),
+                  '--tw-prose-quotes': theme('colors.gray.300'),
+                  '--tw-prose-quote-borders': theme('colors.academic.blue'),
+                  '--tw-prose-captions': theme('colors.gray.400'),
+                  '--tw-prose-code': theme('colors.ink'),
+                  '--tw-prose-pre-code': theme('colors.gray.200'),
+                  '--tw-prose-pre-bg': theme('colors.academic.surface'),
+                },
+              },
+            }),
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #09090b; /* paper */
+        color: #e4e4e7; /* ink */
+        font-family: 'Crimson Pro', serif;
+      }
+      /* Custom scrollbar for dark mode */
+      ::-webkit-scrollbar {
+        width: 8px;
+        background: #09090b;
+      }
+      ::-webkit-scrollbar-track {
+        background: #09090b;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #27272a;
+        border-radius: 4px;
+        border: 2px solid #09090b;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #3f3f46;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.10.1",
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="navbar-container">
-                <a href="index.html" class="navbar-logo">Tilak Kadlaskar</a>
-                <ul class="navbar-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">Welcome to My Blog</h1>
-                <p class="hero-subtitle">Sharing thoughts, insights, and stories</p>
-                <a href="blog.html" class="cta-button">Read My Posts</a>
-            </div>
-        </section>
-
-        <section class="recent-posts">
-            <div class="recent-posts-container">
-                <h2 class="section-title">Recent Blog Posts</h2>
-                <div class="posts-grid">
-                    <article class="post-card">
-                        <h3>Getting Started with Cloud Computing: A Beginner’s Guide</h3>
-                        <p>In today’s digital era, cloud computing is revolutionizing how we store, process, and manage data. From small startups...</p>
-                        <a href="post.html">Read More</a>
-                    </article>
-                    <article class="post-card">
-                        <h3>Second Blog Post</h3>
-                        <p>A brief excerpt of the second blog post...</p>
-                        <a href="blog.html#post2">Read More</a>
-                    </article>
-                    <article class="post-card">
-                        <h3>Third Blog Post</h3>
-                        <p>A brief excerpt of the third blog post...</p>
-                        <a href="blog.html#post3">Read More</a>
-                    </article>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-container">
-            <p>&copy; 2025 Tilak Kadlaskar. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/tilakkadlaskar/">LinkedIn</a>
-                <a href="https://github.com/tilakkadlaskar">GitHub</a>
-                <a href="https://www.x.com/tilakkadlaskar/">Twitter</a>
-                <a href="https://www.instagram.com/tilakkadlaskar/">Instagram</a>
-                <a href="https://www.facebook.com/tilakkadlaskar/">Facebook</a>
-                <a href="mailto:mail@tilakkadlaskar.me">Email</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="./js/home.js"></script>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
 </body>
 </html>
