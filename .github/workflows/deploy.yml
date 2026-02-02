@@ -1,4 +1,4 @@
-# Deploy to GitHub Pages (custom domain: blogs.tilakkadlaskr.me)
+# Deploy to GitHub Pages (custom domain: blogs.tilakkadlaskar.tech)
 #
 # Required: In repo Settings → Pages → Build and deployment → Source:
 #   set to "GitHub Actions" (not "Deploy from a branch").
@@ -41,7 +41,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          # Base path / for custom domain blogs.tilakkadlaskr.me
+          # Base path / for custom domain blogs.tilakkadlaskar.tech
           VITE_BASE_PATH: /
       
       - name: Setup Pages

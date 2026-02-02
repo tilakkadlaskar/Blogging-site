@@ -1,6 +1,6 @@
 # Research Notes & Thoughts
 
-Blog: [blogs.tilakkadlaskr.me](https://blogs.tilakkadlaskr.me)
+Blog: [blogs.tilakkadlaskar.tech](https://blogs.tilakkadlaskar.tech)
 
 ## Run locally
 
