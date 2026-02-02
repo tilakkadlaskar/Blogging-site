@@ -1,3 +1,9 @@
+# Deploy to GitHub Pages (custom domain: blogs.tilakkadlaskr.me)
+#
+# Required: In repo Settings → Pages → Build and deployment → Source:
+#   set to "GitHub Actions" (not "Deploy from a branch").
+# Otherwise the site will serve raw source and the app will not load.
+
 name: Deploy to GitHub Pages
 
 on:

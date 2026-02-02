@@ -1,20 +1,18 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Research Notes & Thoughts
 
-# Run and deploy your AI Studio app
+Blog: [blogs.tilakkadlaskr.me](https://blogs.tilakkadlaskr.me)
 
-This contains everything you need to run your app locally.
+## Run locally
 
-View your app in AI Studio: https://ai.studio/apps/drive/1VYCMDST1-xBvIVU51t8DhfQb9p7ZmSVJ
+**Prerequisites:** Node.js
 
-## Run Locally
+1. Install: `npm install`
+2. Optional: create `.env.local` with `GEMINI_API_KEY=your-key` for the Research Assistant
+3. Dev server: `npm run dev` → open http://localhost:3000
+4. Production build: `npm run build` then `npm run preview`
 
-**Prerequisites:**  Node.js
+## Deploy (GitHub Pages)
 
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- Push to `main`; the **Deploy to GitHub Pages** workflow builds and deploys.
+- In repo **Settings → Pages**, set **Source** to **GitHub Actions** (not “Deploy from a branch”).
+- Custom domain: set in **Settings → Pages → Custom domain** and add a CNAME record in DNS.

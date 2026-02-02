@@ -65,7 +65,7 @@ const BlogPostView: React.FC = () => {
   title={${post.title}},
   author={Kadlaskar, Tilak},
   year={${new Date(post.date).getFullYear()}},
-  url={https://blogs.tilakkadlaskar.tech/#/post/${post.id}}
+  url={https://blogs.tilakkadlaskr.me/#/post/${post.id}}
 }`;
     navigator.clipboard.writeText(bibtex);
     alert("BibTeX copied to clipboard");

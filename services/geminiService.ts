@@ -1,8 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
 import { BlogPost } from "../types";
 
-// Note: In a real production app, ensure API keys are handled securely.
-// For this generated static site code, we use process.env.API_KEY as requested.
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const askResearchAssistant = async (
