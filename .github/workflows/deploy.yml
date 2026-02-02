@@ -35,7 +35,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          # Base path is / for custom domain blogs.tilakkadlaskar.tech
+          # Base path / for custom domain blogs.tilakkadlaskr.me
           VITE_BASE_PATH: /
       
       - name: Setup Pages
