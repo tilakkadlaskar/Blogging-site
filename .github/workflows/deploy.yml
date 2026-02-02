@@ -41,8 +41,13 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          # Base path / for custom domain blogs.tilakkadlaskar.tech
           VITE_BASE_PATH: /
+      
+      - name: Verify build output
+        run: |
+          test -f dist/index.html || (echo "Missing dist/index.html" && exit 1)
+          grep -q "assets/" dist/index.html || (echo "Build may be wrong: index.html has no assets/ script" && exit 1)
+          echo "Build OK: index.html and assets present"
       
       - name: Setup Pages
         uses: actions/configure-pages@v4

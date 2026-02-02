@@ -76,10 +76,30 @@
     </style>
 </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div id="load-fallback" style="padding: 2rem; max-width: 32rem; color: #e4e4e7; font-family: 'Crimson Pro', serif;">
+        Loading…
+      </div>
+    </div>
     <noscript>
-      <p style="padding: 2rem; color: #e4e4e7;">This app needs JavaScript. Enable it or check that the site was deployed from GitHub Actions (Settings → Pages → Source: GitHub Actions).</p>
+      <p style="padding: 2rem; color: #e4e4e7;">This app needs JavaScript. Set Pages → Source to GitHub Actions and ensure the deploy workflow succeeded.</p>
     </noscript>
-  <script type="module" src="/index.tsx"></script>
+    <script>
+      setTimeout(function() {
+        var root = document.getElementById('root');
+        var fb = document.getElementById('load-fallback');
+        if (fb && root && root.children.length === 1 && root.children[0].id === 'load-fallback') {
+          fb.innerHTML = '<p style="margin-bottom: 1rem;"><strong>App didn’t load.</strong></p>' +
+            '<p style="margin-bottom: 0.5rem;">Do this:</p>' +
+            '<ol style="margin-left: 1.5rem; line-height: 1.6;">' +
+            '<li>Open your repo on GitHub → <strong>Settings</strong> → <strong>Pages</strong></li>' +
+            '<li>Under "Build and deployment", set <strong>Source</strong> to <strong>GitHub Actions</strong> (not "Deploy from a branch")</li>' +
+            '<li>Go to the <strong>Actions</strong> tab → run "Deploy to GitHub Pages" or push a commit</li>' +
+            '<li>Wait for the workflow to finish (green check), then reload this page</li>' +
+            '</ol>';
+        }
+      }, 4500);
+    </script>
+    <script type="module" src="/index.tsx"></script>
 </body>
 </html>
